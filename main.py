@@ -6,8 +6,15 @@ import os
 import asyncio
 from datetime import datetime
 from keep_alive import keep_alive
+
 keep_alive()
 
+# DEBUG - mostra tutte le variabili d'ambiente disponibili
+print("=== ENV VARS ===")
+for key in os.environ:
+    if "TOKEN" in key or "DISCORD" in key:
+        print(f"  Trovato: {key}")
+print("================")
 
 
 # ─────────────────────────────────────────────
