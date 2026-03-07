@@ -5,6 +5,7 @@ import json
 import os
 import asyncio
 from datetime import datetime
+from keep_alive import keep_alive
 
 
 # ─────────────────────────────────────────────
@@ -402,4 +403,5 @@ if __name__ == "__main__":
         print("❌ Token non trovato! Controlla le variabili d'ambiente su Render.")
     else:
         print(f"✅ Token trovato ({len(TOKEN)} caratteri)")
+        keep_alive()
         bot.run(TOKEN)
